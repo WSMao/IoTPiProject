@@ -1,0 +1,87 @@
+<!doctype html>
+<head>
+    <title>RPi IoT Project </title>
+    <meta http-equiv="Content-type" content= "text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href= "{{url_for('static',filename='style.css')}}">
+    <script src="{{url_for('static',filename='handler.js')}}" ></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+    
+    <script>
+    $(document).ready(function(){
+        $("p").click(function(){
+            $(this).hide();
+        });
+    });
+    </script>
+
+   
+</head>
+
+<body>
+    <h3 id="idd">LED Control</h3>
+
+    <!--<button id="btn_on" onclick="click_on()"> ON </button>-->
+    <button id="btn_on"> ON </button> 
+    <button id="btn_off" onclick="click_off()"> OFF </button>
+    
+    <script>
+
+        alert("1");
+        $(document).ready(function(){
+            $("#btn_on").click(function(){
+                alert("2");
+                
+                $.getJSON ('/test', function ( data )  {
+                    alert("success!!");
+                    alert(data.result);
+                }); 
+                return  false ;
+      
+      
+<!---      
+                var a=new XMLHttpRequest();
+                a.open("GET","/static/pinon.php");
+
+                a.onreadystatechange=function(){
+                    alert("a.readState:");
+                    alert(a.readyState);
+                    if(a.readyState ==4 ){
+                        alert("status:");
+                        alert(a.status);
+                        if(a.status == 200){
+                            alert("states=200");
+                        }
+                        else 
+                            alert("HTTP ERROR");
+                    }
+                }
+                a.send();
+-->
+            })
+        })
+    </script>
+    
+    
+
+    
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

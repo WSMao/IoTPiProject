@@ -1,0 +1,18 @@
+h3{
+    color:rgb(89, 255, 42);
+}
+
+
+
+#btn_on,#btn_off{
+    width:50px;
+    height:30px;
+    color:red;
+    background:white;
+    border-color:rgb(201, 221, 217);
+    border-width:1px;
+    border-style:solid;
+    border-radius:5px;
+    font-size:15px;
+}
+

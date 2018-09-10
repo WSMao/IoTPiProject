@@ -1,0 +1,16 @@
+<script>
+	$(document).ready(function(){
+		$('#clickON').click(function(){
+			var a =new XMLHttpRequest();
+			a.open("GET","pinon.php");
+			a.onreadystatechange=function(){
+				if(a.readyState==4{
+					if(a.states == 200){}
+					else alert("HTTP ERROR");
+				}			
+
+			}
+			a.send();
+		})
+	}) 
+</script>
