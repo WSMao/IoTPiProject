@@ -1,4 +1,5 @@
 <!doctype html>
+
 <head>
     <title>RPi IoT Project </title>
     <meta http-equiv="Content-type" content= "text/html; charset=utf-8" />
@@ -27,6 +28,7 @@
     <button id="btn_on"> ON </button> 
     <button id="btn_off" onclick="click_off()"> OFF </button>
     
+   
     <script>
 
         alert("1");
@@ -40,26 +42,26 @@
                 }); 
                 return  false ;
       
-      
-<!---      
-                var a=new XMLHttpRequest();
-                a.open("GET","/static/pinon.php");
+                
 
-                a.onreadystatechange=function(){
-                    alert("a.readState:");
-                    alert(a.readyState);
-                    if(a.readyState ==4 ){
-                        alert("status:");
-                        alert(a.status);
-                        if(a.status == 200){
-                            alert("states=200");
-                        }
-                        else 
-                            alert("HTTP ERROR");
-                    }
-                }
-                a.send();
--->
+                // var a=new XMLHttpRequest();
+                // a.open("GET","/static/pinon.php");
+
+                // a.onreadystatechange=function(){
+                //     alert("a.readState:");
+                //     alert(a.readyState);
+                //     if(a.readyState ==4 ){
+                //         alert("status:");
+                //         alert(a.status);
+                //         if(a.status == 200){
+                //             alert("states=200");
+                //         }
+                //         else 
+                //             alert("HTTP ERROR");
+                //     }
+                // }
+                // a.send();
+
             })
         })
     </script>

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Video Streaming Demonstration</h1>
+  <img src="{{ url_for('video_feed') }}">
+
+{% endblock content %} 
+
+
+
+{#   底下是原始的程式碼，先暫存
+  <html>
+  <head>
+    <title>Video Streaming Demonstration</title>
+    <link rel="stylesheet" type="text/css" href= "{{url_for('static',filename='style.css')}}">
+    <script src="{{url_for('static',filename='handler.js')}}" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script>
+      $(document).ready(function(){
+          $("p").click(function(){
+              $(this).hide()
+          })
+      })
+      </script>
+  </head>
+
+
+  <body>
+    <h1>Video Streaming Demonstration</h1>
+    <img src="{{ url_for('video_feed') }}">
+    <h3 id="idd">LED Control</h3>
+
+    <!--<button id="btn_on" onclick="click_on()"> ON </button>-->
+    <button id="btn_on"> ON </button> 
+    <button id="btn_off" onclick="click_off()"> OFF </button>
+    
+    <script>
+      $(document).ready(function(){
+        $("#btn_on").click(function(){
+          alert("button clicked!")
+          $.getJSON ('/ajax', function ( data )  {  /* data is sent back from server side */ 
+            alert("AJAX success!!")
+            alert(data.result)
+          })
+          alert("end")
+          return false
+        })
+        alert("test")
+      })
+    </script>
+
+
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+
+  </body>
+</html>
+  
+#}
+
+
+
